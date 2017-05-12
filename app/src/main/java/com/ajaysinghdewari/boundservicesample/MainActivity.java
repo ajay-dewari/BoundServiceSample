@@ -99,4 +99,10 @@ private void getRandomNumber(){
         Toast.makeText(MainActivity.this, "Service is not bound to this activity ", Toast.LENGTH_LONG).show();
     }
 }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unBindService();
+    }
 }
