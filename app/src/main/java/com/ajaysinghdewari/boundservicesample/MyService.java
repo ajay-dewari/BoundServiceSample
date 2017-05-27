@@ -4,7 +4,6 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
-import android.support.annotation.IntDef;
 import android.util.Log;
 
 import java.util.Random;
@@ -33,7 +32,7 @@ public class MyService extends Service {
     }
 
     @Override
-    public int onStartCommand(Intent intent, /*@IntDef(value = {Service.START_FLAG_REDELIVERY, Service.START_FLAG_RETRY}, flag = true)*/int flags, int startId) {
+    public int onStartCommand(Intent intent, int flags, int startId) {
 
         Log.d(TAG, "OnStartCommand() triggred, Thread_id= "+Thread.currentThread().getId());
 
